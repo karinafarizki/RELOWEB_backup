@@ -27,7 +27,7 @@ class AuthController extends Controller
     {
         $user = Socialite::driver($provider)->user();
         $authUser = $this->findOrCreateUser($user, $provider);
-        Auth::login($authUser, true);
+        Auth::login($authUser);
         return redirect('/');
     }
 
@@ -40,7 +40,7 @@ class AuthController extends Controller
      */
     public function findOrCreateUser($user, $provider)
     {
-        $authUser = User::where('provider_id', $user->id)->first();
+        $authUser = User::where('provider_id', $user->id)->orWhere('email', $user->email)->first();
         if ($authUser) {
             return $authUser;
         }
@@ -48,6 +48,7 @@ class AuthController extends Controller
             $data = User::create([
                 'name'     => $user->name,
                 'email'    => !empty($user->email)? $user->email : '' ,
+                'password' => bcrypt('password'),
                 'provider' => $provider,
                 'provider_id' => $user->id
             ]);

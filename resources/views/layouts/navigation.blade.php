@@ -22,6 +22,11 @@
           <li class="nav-item">
             <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
           </li>
+          @auth
+          <li class="nav-item">
+            <span class="nav-link">Hi, {{ auth()->user()->name}}</span>
+          </li>
+          @else
           <li class="nav-item">
             {{-- Pop Up Form with Data Toggle and Modal --}}
             <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#loginModal">Masuk</a>
@@ -32,6 +37,7 @@
             {{-- Pop Up Form with Data Toggle and Modal --}}
             <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#registerModal">Daftar</a>
           </li>
+          @endauth
         </ul>
       </div>
     </div>
