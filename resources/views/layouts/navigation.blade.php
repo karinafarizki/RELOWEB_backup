@@ -31,8 +31,6 @@
             {{-- Pop Up Form with Data Toggle and Modal --}}
             <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#loginModal">Masuk</a>
           </li>
-          {{-- notice there is a symbol below this comment --}}
-          |
           <li class="nav-item">
             {{-- Pop Up Form with Data Toggle and Modal --}}
             <a class="nav-link js-scroll-trigger" href="#" data-toggle="modal" data-target="#registerModal">Daftar</a>
