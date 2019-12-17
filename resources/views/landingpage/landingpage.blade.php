@@ -30,7 +30,8 @@
   @include('layouts.footer')
 
   {{-- including JavaScript external resource --}}
-  @include('layouts.resource')  
+  @include('layouts.resource') 
+  @yield('resources') 
 
 </body>
 
