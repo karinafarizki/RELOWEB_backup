@@ -29,14 +29,13 @@
                                     </span>
                                 @enderror
           <!-- <input type="password" id="Form-pass1" class="form-control validate" placeholder="Password"> -->
-          <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+          <br><input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-          <p class="font-small blue-text d-flex justify-content-end">Forgot <a href="#" class="blue-text ml-1">Password?</a></p>
         </div>
 
         <div class="text-center mb-3">
