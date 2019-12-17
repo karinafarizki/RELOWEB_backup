@@ -47,10 +47,10 @@
         <div class="row my-3 d-flex justify-content-center">
           <!--Facebook-->
           <!-- <button href="{{ route('sosial.auth', 'facebook') }}" type="submit" class="btn btn-white btn-rounded mr-md-3 z-depth-1a"><i class="fab fa-facebook-f text-center"></i></button> -->
-          <a href="{{ route('sosial.auth', 'google') }}" class="btn btn-github"><i class="fa fa-github"></i> Google</a>
+          <a href="{{ route('sosial.auth', 'google') }}" class="btn btn-github"><i class="fab fa-google text-primary"></i> Google</a>
           <!--Google --->
           <!-- <button href="{{ route('sosial.auth', 'google') }}" type="submit" class="btn btn-white btn-rounded z-depth-1a"><i class="fab fa-google-plus-g"></i></button> -->
-          <a href="{{ route('sosial.auth', 'facebook') }}" class="btn btn-facebook"><i class="fa fa-facebook"></i> Facebook</a>
+          <a href="{{ route('sosial.auth', 'facebook') }}" class="btn btn-facebook"><i class="fab fa-facebook-f text-primary"></i> Facebook</a>
         </div>
       </div>
       <!--Footer-->
@@ -93,7 +93,7 @@
                                     </span>
                                 @enderror
             <!-- <input type="email" id="email" class="form-control validate" placeholder="Email"><br> -->
-            <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
+            <br><input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" placeholder="Email">
 
                                 @error('email')
                                     <span class="invalid-feedback" role="alert">
@@ -101,7 +101,7 @@
                                     </span>
                                 @enderror
             <!-- <input type="password" id="password" class="form-control validate" placeholder="Password"><br> -->
-            <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
+            <br><input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password" placeholder="Password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">
@@ -109,7 +109,7 @@
                                     </span>
                                 @enderror
             <!-- <input type="password" id="confirmpassword" class="form-control validate" placeholder="Konfirmasi Password"> -->
-            <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Konfirmasi Password">
+            <br><input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" placeholder="Konfirmasi Password">
           </div>
           <div class="text-center mb-3">
             <button type="submit" class="btn btn-primary btn-xl js-scroll-trigger">Daftar</button>
@@ -118,8 +118,8 @@
       </div>
       <!--Footer-->
       <div class="modal-footer mx-5 pt-3 mb-1">
-        <p class="font-small grey-text d-flex justify-content-end">Sudah punya akun? <a href="#" class="blue-text ml-1">
-            Masuk dengan Akun</a></p>
+        {{-- <p class="font-small grey-text d-flex justify-content-end">Sudah punya akun? <a href="#" class="blue-text ml-1">
+            Masuk dengan Akun</a></p> --}}
       </div>
     </div>
     <!--/.Content-->
